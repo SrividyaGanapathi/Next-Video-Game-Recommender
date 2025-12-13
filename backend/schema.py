@@ -10,7 +10,7 @@ class Games(Base):
     name = Column(String, index = True, nullable = False)
     description = Column(String)
     genres = Column(String)
-    platforms = Column(String) # comma-separated
+    platforms = Column(String)
     released = Column(String) #'YYYY-MM-DD'
     rating = Column(Float) # RAWG user rating (0–5)
     metacritic_rating = Column(Float) 

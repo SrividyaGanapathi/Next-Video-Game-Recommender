@@ -10,6 +10,6 @@ def create_tables(table_name):
     db_path = path if path.is_absolute() else PARENT_DIR / path
     if db_path.exists():
         print(f"{db_path.name} already exists at {db_path}.")
-        return
-    Base.metadata.create_all(bind = engine)
-    print(f"{table_name} Tables created successfully at {db_path}.")
+    else:
+        Base.metadata.create_all(bind = engine)
+        print(f"{table_name} Tables created successfully at {db_path}.")
